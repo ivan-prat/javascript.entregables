@@ -1,8 +1,14 @@
-let nombre = prompt("Ingrese su nombre:");
-alert("Hola, " + nombre + "! Bienvenido a mi sitio web.");
-
-let nacimiento = parseInt(prompt("Ingrese año de nacimiento:"));
-alert("Tienes " + (2026 - nacimiento) + " años.");
-
-let club = prompt("¿Cual es su club de futbol favorito?:");
-alert("¡Usted ha seleccionado " + club + "!" + " Excelente elección!");
+let rol;
+do {
+    rol = prompt("Te gustaria ingresar como Usuario, Administrador o Invitado?:")?.toLowerCase();
+} while (rol === null || rol === "");
+if (rol === "administrador") {
+    alert("Bienvenido, Acceso completo al sistema");
+} else if (rol === "usuario") {
+    alert("Bienvenido, Acceso a tu panel de usuario");
+} else if (rol === "invitado") {
+    alert("Bienvenido, Acceso limitado al sistema");
+}
+else {
+    alert("Rol no reconocido, ingresa un rol valido");
+}
