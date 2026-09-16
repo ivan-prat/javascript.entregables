@@ -15,6 +15,7 @@ else {
 }
 }
 const preguntarContinuar = (texto) => confirm(texto);
+const despedirUsuario = () => alert("¡Gracias por utilizar mi simulador, hasta luego!");
 let continuar = true;
 let rol;
 do {
@@ -24,3 +25,4 @@ do {
 let mensaje = mostrarMensaje(rol);
 continuar = preguntarContinuar(mensaje);
 } while (continuar);
+despedirUsuario();
