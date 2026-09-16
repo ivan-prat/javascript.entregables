@@ -1,14 +1,17 @@
+let continuar = true;
 let rol;
+do {
 do {
     rol = prompt("Te gustaria ingresar como Usuario, Administrador o Invitado?:")?.toLowerCase();
 } while (rol === null || rol === "");
 if (rol === "administrador") {
-    alert("Bienvenido, Acceso completo al sistema");
+    continuar = confirm("Bienvenido, Acceso completo al sistema\nTe gustaria volver a ingresar como otro rol?");
 } else if (rol === "usuario") {
-    alert("Bienvenido, Acceso a tu panel de usuario");
+    continuar = confirm("Bienvenido, Acceso a tu panel de usuario\nTe gustaria volver a ingresar como otro rol?");
 } else if (rol === "invitado") {
-    alert("Bienvenido, Acceso limitado al sistema");
+    continuar = confirm("Bienvenido, Acceso limitado al sistema\nTe gustaria volver a ingresar como otro rol?");
 }
 else {
     alert("Rol no reconocido, ingresa un rol valido");
 }
+} while (continuar);
